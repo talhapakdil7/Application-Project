@@ -1,15 +1,11 @@
 @model Candidate
 
-
-
-
-
 <div class="container">
 
 
  <h1 class="text-center">Apply</h1>
 
-
+<form action="/course/apply" method="post">
   <div class="form-group mb-2">
     <label for="">Email</label>
     <input name="Email" class="form-control">
@@ -53,15 +49,15 @@
         <p>
 
             <input type="radio" name="SelectedCourse" id="blazor" value="Blazor" >
-           <label for="blazor">Asp.net core api</label>
+           <label for="blazor">blazor</label>
         </p>
     </fieldset>
 
 
     <button type="submit" class="btn btn-primary">Apply</button>
-    
+
   <a href="/home" class="btn btn-warning ">home</a>
 
  </div>
-
+</form>
 </div>

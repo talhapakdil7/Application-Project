@@ -1,3 +1,4 @@
+using BtkAcademyApp.Models;
 using Microsoft.AspNetCore.Mvc;
 namespace BtkAcademyApp.Controllers
 {
@@ -14,6 +15,16 @@ namespace BtkAcademyApp.Controllers
         }
       
        public IActionResult Apply()
+        {
+
+            return View();
+
+        }
+      
+
+
+        [HttpPost]
+         public IActionResult Apply(Candidate model)
         {
 
             return View();
