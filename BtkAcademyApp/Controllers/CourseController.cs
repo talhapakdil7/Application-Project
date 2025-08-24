@@ -20,11 +20,12 @@ namespace BtkAcademyApp.Controllers
             return View();
 
         }
-      
+
 
 
         [HttpPost]
-         public IActionResult Apply(Candidate model)
+     
+         public IActionResult Apply([FromForm] Candidate model)
         {
 
             return View();

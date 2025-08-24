@@ -5,26 +5,26 @@
 
  <h1 class="text-center">Apply</h1>
 
-<form action="/course/apply" method="post">
+<form asp-action="Apply" method="post">
   <div class="form-group mb-2">
-    <label for="">Email</label>
-    <input name="Email" class="form-control">
+    <label asp-for="Email"></label>
+    <input asp-for="Email" class="form-control">
   </div>
 
   <div class="form-group mb-2">
-    <label for="">FirstName</label>
-    <input name="FirstName" class="form-control">
+    <label asp-for="FirstName"></label>
+    <input asp-for="FirstName" class="form-control">
   </div>
 
   <div class="form-group mb-2">
-    <label for="">LastName</label>
-    <input name="LastName" class="form-control">
+    <label asp-for="LastName"></label>
+    <input asp-for="LastName" class="form-control">
   </div>
 
 
-<div class="form-group mb-2">
-    <label for="">Age</label>
-    <select name="Age" id="" class="form-control">
+  <div class="form-group mb-2">
+    <label asp-for="Age"></label>
+    <select  id="" asp-for="Age" class="form-select">
         <option value="18">18</option>
         <option value="19">19</option>
         <option value="20">20</option>
@@ -37,18 +37,18 @@
     <fieldset>
         <legend>Select one Course</legend>
         <p>
-
-            <input type="radio" name="SelectedCourse" id="mvc" value="ASP.NETCORE MVC" >
+        
+            <input type="radio" asp-for="SelectedCourse" id="mvc" value="ASP.NETCORE MVC" >
            <label for="mvc">Asp.net core Mvc</label>
         </p>
         <p>
 
-            <input type="radio" name="SelectedCourse" id="api" value="ASP.NETCORE api" >
+            <input type="radio" asp-for="SelectedCourse"  id="api" value="ASP.NETCORE api" >
            <label for="api">Asp.net core api</label>
         </p>
         <p>
 
-            <input type="radio" name="SelectedCourse" id="blazor" value="Blazor" >
+            <input type="radio" asp-for="SelectedCourse"  id="blazor" value="Blazor" >
            <label for="blazor">blazor</label>
         </p>
     </fieldset>
@@ -56,7 +56,7 @@
 
     <button type="submit" class="btn btn-primary">Apply</button>
 
-  <a href="/home" class="btn btn-warning ">home</a>
+  <a asp-controller="Home" asp-action="Index" class="btn btn-warning ">home</a>
 
  </div>
 </form>
