@@ -1,1 +1,45 @@
-<h1>sdfjkasjn</h1>
+@model IEnumerable<Candidate>
+
+<h1 class="display-3">Applications(@Model.Count())</h1>
+
+@if(Model.Count()>0)
+{
+
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Yaş</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>Applyat</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.Age</td>
+                <td>@item.Email</td>
+                <td>@item.SelectedCourse</td>
+                <td>@item.ApplyAt</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+}
+
+else{
+
+  
+<div class="alert alert-info">
+    there is no application to apply
+</div>
+
+}
+

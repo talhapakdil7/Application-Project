@@ -9,8 +9,9 @@ namespace BtkAcademyApp.Controllers
 
         public IActionResult Index()
         {
+            var model = Repository.Applications;
 
-            return View();
+            return View("Index",model);
 
         }
       
@@ -24,11 +25,14 @@ namespace BtkAcademyApp.Controllers
 
 
         [HttpPost]
-     
-         public IActionResult Apply([FromForm] Candidate model)
+
+        public IActionResult Apply([FromForm] Candidate model)
         {
 
-            return View();
+            Repository.Add(model);
+
+            return View("Feedback",model);
+            
 
         }
       
